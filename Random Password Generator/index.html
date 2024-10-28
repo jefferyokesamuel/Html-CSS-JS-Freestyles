@@ -12,7 +12,7 @@
 
         <div class="output">
             <input type="text" id="password" placeholder="password">
-            <img src="./icons/copy.png">
+            <img src="./icons/copy.png" onclick="copyPassword()">
         </div>
         <button onclick="createPassword()">Generate Password</button>
     </div>
@@ -39,6 +39,11 @@
             }
 
             passwordBox.value = password
+        }
+
+        function copyPassword(){
+            passwordBox.select()
+            document.execCommand("copy")
         }
     </script>
 </body>
